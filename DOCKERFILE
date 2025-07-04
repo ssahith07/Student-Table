@@ -1,0 +1,14 @@
+FROM node
+
+# Create app directory
+WORKDIR /app
+
+# Install dependencies
+COPY  . /app
+RUN npm install
+
+# Expose port 3000
+EXPOSE 3000
+
+# Start the development server
+CMD ["npm", "start"]
